@@ -28,13 +28,14 @@
 
         <nav class="nav-overlay">
             <ul class="nav-links">
-                <li><a href="index.html">Úvod</a></li>
+                <li><a href="index.html" class="active">Úvod</a></li>
                 <li><a href="slovnicek.html">Slovníček</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="vyukove-materialy.html">Materiály</a></li>
                 <li><a href="hry.html">Hry</a></li>
                 <li><a href="o-nas.html">O nás</a></li>
-                <li><a href="rozcestnik.html" class="active">Rozcestník</a></li> <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="rozcestnik.html">Rozcestník</a></li> 
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -56,17 +57,17 @@
                 <div class="hero-decoration"></div>
             </div>
 
-            <div class="card def-card scroll-card">
+            <div class="card def-card scroll-card" id="word-of-day">
                 <h3>Slovo dne</h3>
-                <div class="term">Dezinformace</div>
-                <p>Vědomě nepravdivá informace vytvořená se záměrem oklamat.</p>
+                <div class="term" id="word-of-day-title">Dezinformace</div>
+                <p id="word-of-day-desc">Vědomě nepravdivá informace vytvořená se záměrem oklamat.</p>
                 <a href="slovnicek.html" class="link-arrow">Další pojmy &rarr;</a>
             </div>
 
-            <div class="card blog-card scroll-card card-image-fade" style="--bg-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80');">
+            <div class="card blog-card scroll-card card-image-fade" id="latest-blog-card" style="--bg-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80');">
                 <div class="card-overlay">
-                    <span class="date">29.12.2025</span>
-                    <h3>Zákaz telefonů ve školách?</h3>
+                    <span class="date" id="latest-blog-date">29.12.2025</span>
+                    <h3 id="latest-blog-title">Zákaz telefonů ve školách?</h3>
                     <a href="blog.html" class="btn btn-small">Číst článek</a>
                 </div>
             </div>
@@ -165,7 +166,7 @@
             </div>
             <div class="footer-links">
                 <a href="kontakt.html">Kontakt</a>
-                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://instagram.com/dezinfo_slovnicheck" target="_blank">Instagram</a>
                 <a href="rozcestnik.html">Užitečné odkazy</a>
             </div>
             <div class="footer-contact">
@@ -178,6 +179,7 @@
 		🌙
 	</button>
 
+    <script src="dictionary-data.js"></script>
     <script src="blog-data.js"></script> <script src="script.js"></script>
 </body>
 </html>

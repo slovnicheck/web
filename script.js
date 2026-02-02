@@ -61,6 +61,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
+    // 2.5 SLOVO DNE - NÁHODNÝ VÝBĚR
+    // ==========================================
+    const wordOfDayTitle = document.getElementById('word-of-day-title');
+    const wordOfDayDesc = document.getElementById('word-of-day-desc');
+    
+    if (wordOfDayTitle && wordOfDayDesc && typeof dictionaryData !== 'undefined') {
+        const allTerms = dictionaryData.terms || [];
+        if (allTerms.length > 0) {
+            const randomTerm = allTerms[Math.floor(Math.random() * allTerms.length)];
+            wordOfDayTitle.textContent = randomTerm.title;
+            wordOfDayDesc.textContent = randomTerm.desc;
+        }
+    }
+
+    // ==========================================
+    // 2.6 NEJNOVĚJŠÍ ČLÁNEK - HLAVNÍ STRÁNKA
+    // ==========================================
+    const latestBlogCard = document.getElementById('latest-blog-card');
+    const latestBlogDate = document.getElementById('latest-blog-date');
+    const latestBlogTitle = document.getElementById('latest-blog-title');
+    
+    if (latestBlogCard && latestBlogDate && latestBlogTitle && typeof blogData !== 'undefined' && blogData.length > 0) {
+        // Najdi článek s nejvyšším ID (nejnovější)
+        const latestArticle = blogData.reduce((prev, current) => 
+            (prev.id > current.id) ? prev : current
+        );
+        
+        // Naplň elementy daty
+        latestBlogDate.textContent = latestArticle.date;
+        latestBlogTitle.textContent = latestArticle.title;
+        
+        // Nastav pozadí - pokud má článek obrázek, použij ho, jinak použij výchozí
+        if (latestArticle.image && latestArticle.image.trim() !== "") {
+            latestBlogCard.style.setProperty('--bg-image', `url('${latestArticle.image}')`);
+        }
+    }
+
+    // ==========================================
     // 3. BLOG - LOGIKA (Hledání + Řazení + Render)
     // ==========================================
     const blogGrid = document.getElementById('blog-grid');
@@ -285,11 +323,153 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // 6. SPUŠTĚNÍ ANIMACÍ
+    // 6. TEAM CAROUSEL - O NÁS STRÁNKA
+    // ==========================================
+    initTeamCarousel();
+
+    // ==========================================
+    // 7. SPUŠTĚNÍ ANIMACÍ
     // ==========================================
     startFluidAnimation();
     window.addEventListener('resize', startFluidAnimation);
 
+
+    // ==========================================
+    // DEFINICE FUNKCÍ (Slovníček, Animace, Carousel)
+    // ==========================================
+
+    function initTeamCarousel() {
+        const carousel = document.getElementById('teamCarousel');
+        if (!carousel) return; // Carousel není na stránce
+
+        const track = document.getElementById('carouselTrack');
+        const viewport = carousel.querySelector('.carousel-viewport');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        if (!track || slides.length === 0 || !viewport) return;
+
+        let currentIndex = 0;
+        const slideWidth = 34.2; // Šířka jednoho slidu v procentech (nastaveno v CSS)
+        
+        // Autoplay nastavení
+        let autoplayTimeout;
+        const autoplayDelay = 5000; // 5 sekund bez aktivity
+
+        // Určit počet viditelných slidů na základě šířky viewportu
+        function getVisibleSlides() {
+            const viewportWidth = viewport.offsetWidth;
+            const slideElement = slides[0];
+            if (!slideElement) return 1;
+            
+            const slideWidth = slideElement.offsetWidth;
+            const visible = Math.max(1, Math.round(viewportWidth / slideWidth));
+            return Math.min(visible, slides.length);
+        }
+
+        let visibleSlides = getVisibleSlides();
+
+        // Vytvoření teček - počet = počet slidů - viditelné slidy + 1
+        function createDots() {
+            if (!dotsContainer) return;
+            
+            dotsContainer.innerHTML = '';
+            visibleSlides = getVisibleSlides();
+            const numDots = Math.max(1, slides.length - visibleSlides + 1);
+            
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('button');
+                dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
+                dot.setAttribute('aria-label', `Slide ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateCarousel() {
+            // Posun tracku po celých blocích
+            const offset = -currentIndex * slideWidth;
+            track.style.transform = `translateX(${offset}%)`;
+
+            // Aktualizace teček
+            const numDots = Math.max(1, slides.length - visibleSlides + 1);
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function resetAutoplay() {
+            clearTimeout(autoplayTimeout);
+            if (carousel.offsetParent !== null) { // Jen pokud je viditelný
+                autoplayTimeout = setTimeout(() => {
+                    nextSlide();
+                }, autoplayDelay);
+            }
+        }
+
+        function goToSlide(index) {
+            visibleSlides = getVisibleSlides();
+            const numDots = Math.max(1, slides.length - visibleSlides + 1);
+            currentIndex = Math.max(0, Math.min(index, numDots - 1));
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function nextSlide() {
+            visibleSlides = getVisibleSlides();
+            const numDots = Math.max(1, slides.length - visibleSlides + 1);
+            currentIndex = (currentIndex + 1) % numDots;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function prevSlide() {
+            visibleSlides = getVisibleSlides();
+            const numDots = Math.max(1, slides.length - visibleSlides + 1);
+            currentIndex = (currentIndex - 1 + numDots) % numDots;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        // Event listenery na tlačítka
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+        // Klávesnice - šipky doleva/doprava
+        document.addEventListener('keydown', (e) => {
+            if (carousel.offsetParent === null) return;
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Swipe pro mobilní zařízení
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            resetAutoplay();
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) nextSlide();
+            if (touchEndX - touchStartX > 50) prevSlide();
+        });
+
+        // Reaction na změnu okna
+        window.addEventListener('resize', () => {
+            createDots();
+            updateCarousel();
+        });
+
+        // Iniciální vykreslení a spuštění autoplay
+        createDots();
+        updateCarousel();
+        resetAutoplay();
+    }
 
     // ==========================================
     // DEFINICE FUNKCÍ (Slovníček, Animace)
