@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nás | (Dez)informační slovnícheck</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/logo.png" alt="Logo" class="header-logo">
+                <span>(Dez)informační <span class="highlight">slovnícheck</span></span>
+            </a>
+        </div>
+
+        <div class="controls">
+            <button class="menu-toggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <nav class="nav-overlay">
+            <ul class="nav-links">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="slovnicek.html">Slovníček</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="vyukove-materialy.html">Materiály</a></li>
+                <li><a href="hry.html">Hry</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="rozcestnik.html" class="active">Rozcestník</a></li> <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <section class="bento-grid">
+            <div class="card hero-card span-4 team-hero static-card">
+                <div class="team-hero-content">
+                    <h1>O nás</h1>
+                    <p class="lead-text">
+                        Ahoj, vítáme Tě na našich webových stránkách! Jsme skupina mladých lidí, kteří se v roce 2023/24 zapojili do projektu <strong>Fakescape</strong>.
+                    </p>
+                    <p>
+                        Jsme tým pěti lidí plný nadšení, s vášní obohacovat společnost v oblasti mediálního vzdělávání. 
+                        V dnešním světě plném informačního přetížení chceme nabídnout pomocnou ruku – proto vznikl tento slovníček a web.
+                    </p>
+                </div>
+                <div class="team-hero-image">
+                    <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000003-7ed2e7ed2f/pokusofinalniverzi.webp?ph=d35666577a" alt="Náš tým">
+                </div>
+            </div>
+        </section>
+
+        <section class="team-carousel-section">
+            <h2 class="section-title">Náš tým</h2>
+            
+            <!-- Desktop Carousel -->
+            <div class="team-carousel" id="teamCarousel">
+                <button class="carousel-arrow carousel-prev" aria-label="Předchozí">
+                    <span>‹</span>
+                </button>
+                
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <div class="carousel-slide">
+                            <div class="card team-card">
+                                <div class="team-img-wrapper">
+                                    <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000077-92f6692f68/dominikfotona%20web.webp?ph=d35666577a" alt="Dominik Herold">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Dominik Herold</h3>
+                                    <span class="role">Předseda, vedoucí fundraisingu</span>
+                                    <p>Studuji matematiku a občanskou výchovu v Brně. Svůj čas často trávím na internetu, a proto se ptám – neměli bychom se před nástrahami mediálního světa chránit?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card team-card">
+                                <div class="team-img-wrapper">
+                                    <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000007-161c4161c5/jessfotonaweb.webp?ph=d35666577a" alt="Jesika Vrbovcová">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Jesika Vrbovcová</h3>
+                                    <span class="role">Koordinátor</span>
+                                    <p>Studuji žurnalistiku na UK. Jsem extrovert a optimista. Miluji focení, plavání a fantasy knihy. Ráda poznávám nové lidi a objevuji zajímavá místa.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card team-card">
+                                <div class="team-img-wrapper">
+                                    <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000079-19cee19cf0/natymedailonek-8.webp?ph=d35666577a" alt="Natálie Maňáková">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Natálie Maňáková</h3>
+                                    <span class="role">Grafik</span>
+                                    <p>Studentka gymnázia v Příboře. Tvořím grafiku pro školní časopis a podcast GYPRIcast. Jsem komunikativní a v budoucnu chci studovat média a grafiku.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card team-card">
+                                <div class="team-img-wrapper">
+                                    <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000081-8902e89030/makyfotonaweb.webp?ph=d35666577a" alt="Markéta Langerová">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Markéta Langerová</h3>
+                                    <span class="role">Editor</span>
+                                    <p>Nastupuji na práva na MUNI. Absolvovala jsem letní školy žurnalistiky. Ve volném čase se věnuji zpěvu, slam poetry a francouzštině.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card team-card">
+                                <div class="team-img-wrapper">
+                                    <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000083-828bc828be/tamcafotonaweb.webp?ph=d35666577a" alt="Tamara Macková">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Tamara Macková</h3>
+                                    <span class="role">Redaktor</span>
+                                    <p>Nastupuji na ekonomiku a management. Věnovala jsem se školnímu časopisu. Miluji tanec, knihy a filmy.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <button class="carousel-arrow carousel-next" aria-label="Další">
+                    <span>›</span>
+                </button>
+            </div>
+
+            <!-- Carousel Dots -->
+            <div class="carousel-dots" id="carouselDots"></div>
+
+            <!-- Mobile Grid (shown on smaller screens) -->
+            <div class="team-mobile-grid">
+                <div class="card team-card-mobile">
+                    <div class="team-img-wrapper">
+                        <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000077-92f6692f68/dominikfotona%20web.webp?ph=d35666577a" alt="Dominik Herold">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dominik Herold</h3>
+                        <span class="role">Předseda, vedoucí fundraisingu</span>
+                        <p>Studuji matematiku a občanskou výchovu v Brně. Svůj čas často trávím na internetu, a proto se ptám – neměli bychom se před nástrahami mediálního světa chránit?</p>
+                    </div>
+                </div>
+
+                <div class="card team-card-mobile">
+                    <div class="team-img-wrapper">
+                        <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000007-161c4161c5/jessfotonaweb.webp?ph=d35666577a" alt="Jesika Vrbovcová">
+                    </div>
+                    <div class="team-info">
+                        <h3>Jesika Vrbovcová</h3>
+                        <span class="role">Koordinátor</span>
+                        <p>Studuji žurnalistiku na UK. Jsem extrovert a optimista. Miluji focení, plavání a fantasy knihy. Ráda poznávám nové lidi a objevuji zajímavá místa.</p>
+                    </div>
+                </div>
+
+                <div class="card team-card-mobile">
+                    <div class="team-img-wrapper">
+                        <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000079-19cee19cf0/natymedailonek-8.webp?ph=d35666577a" alt="Natálie Maňáková">
+                    </div>
+                    <div class="team-info">
+                        <h3>Natálie Maňáková</h3>
+                        <span class="role">Grafik</span>
+                        <p>Studentka gymnázia v Příboře. Tvořím grafiku pro školní časopis a podcast GYPRIcast. Jsem komunikativní a v budoucnu chci studovat média a grafiku.</p>
+                    </div>
+                </div>
+
+                <div class="card team-card-mobile">
+                    <div class="team-img-wrapper">
+                        <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000081-8902e89030/makyfotonaweb.webp?ph=d35666577a" alt="Markéta Langerová">
+                    </div>
+                    <div class="team-info">
+                        <h3>Markéta Langerová</h3>
+                        <span class="role">Editor</span>
+                        <p>Nastupuji na práva na MUNI. Absolvovala jsem letní školy žurnalistiky. Ve volném čase se věnuji zpěvu, slam poetry a francouzštině.</p>
+                    </div>
+                </div>
+
+                <div class="card team-card-mobile">
+                    <div class="team-img-wrapper">
+                        <img src="https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000083-828bc828be/tamcafotonaweb.webp?ph=d35666577a" alt="Tamara Macková">
+                    </div>
+                    <div class="team-info">
+                        <h3>Tamara Macková</h3>
+                        <span class="role">Redaktor</span>
+                        <p>Nastupuji na ekonomiku a management. Věnovala jsem se školnímu časopisu. Miluji tanec, knihy a filmy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="theme-toggle" class="theme-toggle floating-btn">🌙</button>
+
+    <footer class="bento-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>(Dez)informační slovnícheck</h4>
+                <p>© 2025</p>
+            </div>
+            <div class="footer-links">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="rozcestnik.html">Užitečné odkazy</a>
+            </div>
+            <div class="footer-contact">
+                dezinformacnislovnicek@gmail.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
