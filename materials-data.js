@@ -5,26 +5,161 @@ const materialsData = [
         image: "https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000016-9b1609b161/dezinformace%20infg.png?ph=d35666577a",
         perex: "Záměrné a systematické šíření nepravdivých informací s účelem ovlivnit rozhodování nebo názory adresátů.",
         content: `
-            <h3>Souhrnná charakteristika</h3>
             <ul>
-                <li><strong>Dezinformace:</strong> Záměrné šíření lží.</li>
-                <li><strong>Misinformace:</strong> Šíření lží nevědomky (bez zlého úmyslu).</li>
-                <li>Původ slova: Ruské "dězinformacija" (KGB, studená válka).</li>
-            </ul>
-            <h3>Cíle dezinformací</h3>
-            <ul>
-                <li><strong>Ekonomické:</strong> Zisk z reklamy (clickbait).</li>
-                <li><strong>Diskreditace:</strong> Poškození pověsti osoby či firmy.</li>
-                <li><strong>Polarizace:</strong> Prohloubení rozporů ve společnosti.</li>
-                <li><strong>Vlivové operace:</strong> Podrývání bezpečnosti státu cizí mocností.</li>
-            </ul>
-            <h3>Techniky (Model FIRST)</h3>
-            <ul>
-                <li><strong>Falešný obsah:</strong> Úprava fotek, dokumentů.</li>
-                <li><strong>Identita:</strong> Falešné účty, boti.</li>
-                <li><strong>Rétorika:</strong> Argumentační fauly, emoce.</li>
-                <li><strong>Symbolika:</strong> Zneužívání národních symbolů.</li>
-            </ul>
+    <li>záměrné a systematické šíření nepravdivých informací</li>
+    <li>účel - ovlivnit rozhodování nebo názory adresátů</li>
+    <li><strong>misinformace</strong> - dezinformace šířena nevědomky (bez záměru někoho poškodit nebo se neeticky obohatit na lži)</li>
+    <li>pochází z ruského "дезинформация" [dězinformacija]</li>
+    <li>začátek použití ve spojení sovětského dezinformačního a propagandistického systému během studené války</li>
+        </ul>
+
+    <h3>Cíle dezinformací</h3>
+
+    <h4>Ekonomické</h4>
+        <ul>
+    <li>autoři vydělávají na počtu zobrazených reklam ve svém médiu</li>
+    <li>tvoří kontroverzní články bez ohledu na pravdivost informace</li>
+    <li>dosažení pomocí clickbaitu</li>
+    <li>mohou mít sekundární sociální dopady</li>
+    <li>závislí na obsahu článku</li>
+    <li>obsah může obsahovat malware nebo jiné sledovací programy, používané ke kriminální činnosti</li>
+    <li><strong>účel</strong> - finanční zisk</li>
+        </ul>
+    <h4>Diskreditace</h4>
+        <ul>
+    <li>osoby nebo společnosti</li>
+    <li>jedním z nejčastějších cílů dezinformací</li>
+    <li>diskriminace společnosti</li>
+    <li>negativní ovlivnění skupin osob, která je touto společností podporována.</li>
+    <li>často doplňená polarizaci nebo informační vlivové operace</li>
+    <li><strong>účel</strong> - negativně ovlivnit důvěryhodnost, spolehlivost nebo pověst</li>
+        </ul>
+<h4>Polarizace</h4>
+        <ul>
+    <li>filtrace nepravdivých informací do již probíhající debaty</li>
+    <li>informace má vyvolat odpověď obou táborů, omezení prostoru pro kompromis</li>
+    <li><strong>účel</strong> - prohloubit již stávající rozpory ve společnosti</li>
+    <li><strong>možné následky:</strong>
+        <ul>
+            <li>poškození pověsti nebo důvěryhodnosti</li>
+            <li>intenzivnější polarizace politické debaty</li>
+            <li>dopady na veřejné zdraví (např. hnutí proti očkování)</li>
+            <li>podněcování k násilí</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Informační vlivové operace</h4>
+<ul>
+    <li>autor bývá nepřátelský státní nebo nestátní subjekt</li>
+    <li>využití hybridní vlivové techniky (včetně špionáže a kompromitujících materiálů tzv. "kompro")</li>
+    <li><strong>účel</strong> - podrývání národní prosperity a bezpečnosti ve prospěch nepřátelského subjektu</li>
+    <li><strong>možné následky:</strong>
+        <ul>
+            <li>ovlivňování politiků</li>
+            <li>rozvracení důvěry mezi občany a politiky</li>
+            <li>narušování dobrých mezinárodních vztahů</li>
+        </ul>
+    </li>
+</ul>
+<h4>Touha porazit systém</h4>
+        <ul>
+    <li>dosáhnout tak uznání od ostatních (záměr aktéra nemusí být někomu uškodit)</li>
+    <li><strong>následky:</strong>
+        <ul>
+            <li>nabourání se do kritických systémů</li>
+            <li>únik důvěrných materiálů</li>
+        </ul>
+    </li>
+        </ul>
+
+<h3>Jak rozpoznáme dezinformace?</h3>
+<p>Existuje několik společných principů, jedním ze způsobů, jak dezinformaci rozpoznat, je <strong>model FIRST</strong>:</p>
+
+        <ul>
+    <li><strong>Falešný obsah:</strong> manipulování s obsahem (padělávání dokumentů, úprava fotek…)</li>
+    <li><strong>Identita:</strong> skrývání nebo uvádění nelegitimního zdroje (falešné účty na sociálních sítích)</li>
+    <li><strong>Rétorika:</strong> využívání neplatných argumentů ve veřejných diskuzích</li>
+    <li><strong>Symbolika:</strong> zneužívání komunikační hodnoty událostí (např. médium zpracovává především témata, která rezonují společností, za účelem zvýšení návštěvnosti)</li>
+    <li><strong>Technologie:</strong> zneužívání technologické výhody (využívání internetových botů pro zvýšení dosahů)</li>
+        </ul>
+
+<h3>Dezinformační techniky</h3>
+<h4>Sockpuppet</h4>
+        <ul>
+    <li><strong>útočník:</strong>
+        <ul>
+            <li>publikuje falešný provokativní obsah, jehož téma je společensky citlivé</li>
+            <li>vytvoří na sociální síti několik účtů s falešnou identitou, tím kritizuje jím vytvořený falešný obsah</li>
+            <li>rozšíří falešný obsah prostřednictvím internetových botů</li>
+        </ul>
+    </li>
+    <li><strong>možné dopady:</strong> polarizace debaty, zesílení konfliktu</li>
+</ul>
+<h4>Alternativní narativ</h4>
+        <ul>
+    <li><strong>útočník:</strong>
+        <ul>
+            <li>vytvoří narativ podporující jeho cíl</li>
+            <li>zveřejní předpřipravené dezinformace</li>
+            <li>narativ podporuje na vlastním kanálu nebo na alternativních webových stránkách</li>
+            <li>rozšíří pomocí kontroverzních blogerů nebo komentátorů</li>
+            <li>umlčí kritiku trollingem</li>
+        </ul>
+    </li>
+    <li><strong>možné dopady:</strong> odvedení pozornosti od skutečných problémů, podrytí legitimních stanovisek, vytlačení legitimních narativů</li>
+</ul>
+
+<h4>Zmanipulovaný únik informací</h4>
+<ul>
+    <li><strong>útočník:</strong>
+        <ul>
+            <li>získá interní informace jeho cíle prostřednictvím kybernetického útoku</li>
+            <li>přidá do získaných materiálů padělané dokumenty, které diskreditují cíl</li>
+            <li>šíří tyto informace prostřednictvím zavedených kanálů, aby upoutal pozornost uznávaných médií</li>
+            <li>zesiluje obsah pomocí internetových trollů a botů</li>
+        </ul>
+    </li>
+    <li><strong>možné dopady:</strong> diskreditace, falešné obvinění osoby nebo instituce, podrývání důvěry</li>
+</ul>
+
+<h4>Zacílení na základě velkých dat (tzv. big data)</h4>
+<ul>
+    <li><strong>útočník:</strong>
+        <ul>
+            <li>provede na sociálních sítích analýzu cílové skupiny a identifikuje jejich psychografické spouštěče související s klíčovými tématy</li>
+            <li>založí uzavřené skupiny, které vydává za legitimní organizaci nebo hnutí, pro upoutání cílové skupiny</li>
+            <li>v těchto skupinách šíří dezinformace</li>
+            <li>podněcuje členy k dalšímu šíření dezinformací nebo jiným akcím sledující cíl útočníka</li>
+        </ul>
+    </li>
+    <li><strong>možné dopady:</strong> polarizace debaty, změna chování, podrývání důvěry</li>
+</ul>
+
+<h4>Zmanipulovaná citace</h4>
+<ul>
+    <li><strong>útočník:</strong>
+        <ul>
+            <li>najde vhodnou citaci, kterou vytrhne z kontextu tak, aby se mu hodila a publikuje ji jako součást článku</li>
+            <li>uvede lokální i zahraniční zdroje, které citaci zmiňují</li>
+            <li>sdílí svůj článek na různých platformách nebo prostřednictvím různých aktérů, vždy nepatrně pozměněn</li>
+            <li>odkazuje na tyto platformy a aktéry jako na zdroje zmanipulovaného obsahu</li>
+        </ul>
+    </li>
+    <li><strong>možné dopady:</strong> podrývání důvěry, legitimizace falešných tvrzení</li>
+</ul>
+
+<h4>Cheerleading</h4>
+<ul>
+    <li><strong>útočník:</strong>
+        <ul>
+            <li>pomocí internetových botů a trollů zahltí informační prostor pozitivní zprávou a pozitivními komentáři potlačí odlišné názory</li>
+            <li>vytvoří skupiny podporující jeho stanovisko</li>
+        </ul>
+    </li>
+    <li><strong>možné dopady:</strong> umlčení odlišných názorů, zahlcení informačního prostoru</li>
+</ul>
+             
         `
     },
     {
