@@ -2,7 +2,7 @@ const materialsData = [
     {
         id: "dezinformace",
         title: "Dezinformace",
-        image: "https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000016-9b1609b161/dezinformace%20infg.png?ph=d35666577a",
+        image: "https://www.pesweb.cz/api/media/uploads/shutterstock_73616098_ebe4cd9375.jpg",
         perex: "Záměrné a systematické šíření nepravdivých informací s účelem ovlivnit rozhodování nebo názory adresátů.",
         content: `
             <ul>
