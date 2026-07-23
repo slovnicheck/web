@@ -188,7 +188,7 @@ const materialsData = [
     {
         id: "dunning-kruger",
         title: "Dunning-Krugerův efekt",
-        image: "https://images.unsplash.com/photo-1555435024-2c4d456b63be?auto=format&fit=crop&w=800&q=80", // Náhradní ilustrace, v původním chyběl graf
+        image: "", // Náhradní ilustrace, v původním chyběl graf
         perex: "Kognitivní zkreslení, při kterém lidé s nízkou kompetencí přeceňují své schopnosti a experti se naopak podceňují.",
         content: `
             <h3>Princip</h3>
