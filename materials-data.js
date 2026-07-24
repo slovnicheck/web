@@ -223,21 +223,102 @@ const materialsData = [
         image: "https://d35666577a.cbaul-cdnwnd.com/73803269aab4c81b82c674cc7d598ffb/200000018-a6398a6399/digit%C3%A1ln%C3%AD%20wellbeing.png?ph=d35666577a",
         perex: "Ideální rovnovážný stav, kdy digitální technologie používáme tak, abychom byli spokojeni a cítili se dobře.",
         content: `
-            <h3>O co jde?</h3>
-            <p>Jde o vyváženost digitálního životního stylu. Nejde o to technologie zahodit, ale používat je tak, aby nám sloužily, ne my jim.</p>
-            <h3>Proč to řešit?</h3>
+            <div class="Material" id="Digitalniwellbeing">
+          <div class="MaterialNadpis">
+            <h2>Digitální wellbeing</h2>
+          </div>
+          <div class="MaterialContent">
+            <h5>Souhrná charakteristika</h5>
             <ul>
-                <li><strong>Fyzické zdraví:</strong> Bolavá záda, oči, spánek.</li>
-                <li><strong>Psychika:</strong> FOMO (strach, že nám něco uteče), úzkosti, poruchy pozornosti.</li>
-                <li><strong>Vztahy:</strong> Ztráta osobního kontaktu (phubbing).</li>
+              <li>obtížné jednoduše definovat</li>
+             <li>přesný překlad: <b>digitální pohoda/rovnováha</b></li>
+              <li>definice</li>
+              <ul>
+                <li>ideální rovnovážný stav, kdy digitální technologie používáme tak, abychom byli spokojeni a&nbsp;cítili se&nbsp;dobře – fyzicky, psychicky i&nbsp;sociálně
+                </li><li>vyváženost digitálního životního stylu a&nbsp;digitálních návyků v&nbsp;rovnováze pro zachování života ve&nbsp;skutečném světě
+             </li></ul>
             </ul>
-            <h3>Jak na to v praxi?</h3>
+            <br>
+            <h5>Jednotlivé oblasti</h5>
             <ul>
-                <li>Omezit notifikace.</li>
-                <li>Využívat aplikace na soustředění (Forest, Focus).</li>
-                <li>Nejde o kvantitu času, ale kvalitu využití.</li>
-                <li>Nezakazovat mobily dětem, ale učit je smysluplnému využití.</li>
+              <li>zdravé a&nbsp;vyvážené používání technologií a&nbsp;online komunikace
+              </li><li>zásady bezpečného používání digitálních technologií</li>
+              <li>udržení empatie</li>
+              <li>právní vědomí (co si ve virtuálním prostoru můžeme dovolit)</li>
+              <li>etické chování</li>
             </ul>
+            <br>
+            <h5>Proč bychom se mu měli věnovat?</h5>
+            <ul>
+              <li>Technologie přináší změny</li>
+              <ul>
+                <li>benefity </li>
+                <li>problémy: bolavá záda,ztráta osobní komunikace,problémy pozornosti a&nbsp;mnoho dalšího </li>
+              </ul>
+            <li>Technologie jsou často využívány tam, kde nejsou nutně potřeba </li>
+            <ul>
+              <li>pro zabavení</li>
+              <li>pro pocit spokojenosti</li>
+              <li>strach, že přijdeme o&nbsp;nejnovější informace</li>
+            </ul>
+            <li>Všechny aplikace jsou konfigurovány pro uživatele tak, aby zde strávil co&nbsp;nejvíce času -&gt;&nbsp; možné ohrožení na zdraví  </li>
+            </ul>
+            <br>
+            <h5>Potřeba rozvoje určitých dovedností</h5>
+            <ul>
+              <li>Sociálně - emoční dovednosti</li>
+              <ul>
+                <li>rozpoznání emocí a&nbsp;vědomá práce s&nbsp;vlastními pocity</li>
+                <li>objevování vlastní identity</li>
+                <li>schopnost čelit problémům</li>
+                <li>zvládání stresu</li>
+                <li>vztahové dovednosti</li>
+              </ul>
+              <li>Kritické myšlení</li>
+              <ul>
+                <li>odstup a&nbsp;nadhled</li>
+                <li>kritická reflexe konzumovaného obsahu</li>
+                <li>ověřování věrohodnosti informací </li>
+              </ul>
+              <li>Odpovědnost</li>
+              <li>Občanská angažovanost </li>
+           </ul>
+           <br>
+          <h5>Apekty do praxe</h5>
+          <ul>
+            <li>Není podstatné kolik času s&nbsp;technologiemi strávíme, pokud je čas využit kvalitně </li>
+            <ul>
+              <li>nejde o&nbsp;kvantitu, ale kvalitu</li>
+            </ul>
+            <li>každý by si měl pravidelně hlídat čas strávený u obrazovky (převážně sociální sítě)</li>
+            <li>zákaz technologií není řešení</li>
+          </ul>
+          <br>
+          <h5>Soustředění</h5>
+          <ul>
+            <li>nezakazujte dětem mobil ve výuce, naučte je ho naopak používat pro smyslné účely jako pomocný prvek ve výuce</li>
+            <li>omezte množství notifikací</li>
+            <li>aplikace na soustředění</li>
+            <li>ukažte jim veškeré benefity jejich mobilního telefonu v rámci zdraví ( aplikace pro spánek, fyzickou aktivitu)</li>
+         </ul>
+         <br>
+         <h5>Cíl</h5>
+         <ul>
+          <li>umět se s rozvahou věnovat digitálnímu světu</li>
+          <li>být šťastný a&nbsp;používat technologie ve svůj prospěch</li>
+          <li>sledovat novinky a ustát informační přehlcení </li>
+          <li>umět se v&nbsp;digitálním prostoru bránit, důležitá sebeobrana</li>
+         </ul>
+         <br>
+         <p>
+          „Wellbeing je stav, ve kterém můžeme v&nbsp;podporujícím a&nbsp;podnětném prostředí plně rozvíjet svůj fyzický, kognitivní, emocionální, sociální a&nbsp;duchovní potenciál a&nbsp;žít spolu s&nbsp;ostatními plnohodnotný a&nbsp;spokojený život.“ (Iniciativa Partnerství pro vzdělávání 2030+)
+         </p>
+         <br>
+         <div class="MatImg">
+          <img draggable="false" src="./Výukové materiály_files/digitalw.png">
+        </div>
+          </div>
+        </div>
         `
     },
     {
